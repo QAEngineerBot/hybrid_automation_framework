@@ -1,0 +1,63 @@
+
+
+name: Test Automation Workflow hybrid framework
+
+on:
+  schedule:
+    - cron: 30 03 * * *
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      checks: write
+      issues: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+          cache: maven
+
+      - name: Running Hybrid Test Automation Framework with Maven
+        run: mvn clean test -X -Dbrowser=chrome -DisHeadless=false -Dsuite=testng
+
+      - name: Upload Test logs
+        if: always()
+        uses: actions/upload-artifact@v4.4.3
+        with:
+          name: Test logs
+          path: logs/
+
+     
+      - name: Upload HTML Report & Screenshots as Artifact
+        if: always()
+        uses: actions/upload-artifact@v4.4.3
+        with:
+          name: Test Reports and Screenhots
+          path: Reports/
+
+      - name: Test Execution Status
+        if: always()
+        run: echo "Test Execution Completed"
+
+      - name: Copy report to gh.actions.pages folder
+        if: always()
+        run: |
+          echo "Creating the 'public/extent-reports-githubActions' directory..."
+          mkdir -p public/extent-reports-githubActions
+          echo "Copying Extent Reports to the folder..."
+          cp -r Reports public/extent-reports-githubActions/
+          echo "Listing contents of the folder to verify the copy..."
+          ls -l public/extent-reports-githubActions
+

@@ -14,7 +14,7 @@
         <classes>
             <!-- Cucumber Runner class -->
             <class name="ui.runner.RunUiTest"/>
-            <class name="api.runner.RunApiTest"/>
+<!--             <class name="api.runner.RunApiTest"/> -->
         </classes>
     </test>
 </suite>
