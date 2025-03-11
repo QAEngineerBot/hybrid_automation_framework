@@ -35,7 +35,6 @@ public class TestBase {
         boolean isLambdaTest = Boolean.parseBoolean(System.getProperty("isLambdaTest", "false"));
         boolean isHeadless = Boolean.parseBoolean(System.getProperty("isHeadless", "false"));
 
-        ExtentCucumberAdapter.getCurrentScenario().info("running " + browser);
         ExtentCucumberAdapter.addTestStepLog("Executing test on browser: " + browser);
 
         if (isLambdaTest) {
