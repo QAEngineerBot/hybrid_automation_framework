@@ -73,19 +73,19 @@ public abstract class BrowserUtility {
             if (browserName == Browser.CHROME) {
                 ChromeOptions options = new ChromeOptions();
                 if (isHeadless) {
-                    options.addArguments("--headless=old", "--window-size=1920,1800");
+                    options.addArguments("--headless", "--window-size=1920,1800");
                 }
                 driver.set(new ChromeDriver(options));
             } else if (browserName == Browser.EDGE) {
                 EdgeOptions options = new EdgeOptions();
                 if (isHeadless) {
-                    options.addArguments("--headless=old", "--window-size=1920,1800");
+                    options.addArguments("--headless", "--window-size=1920,1800");
                 }
                 driver.set(new EdgeDriver(options));
             } else if (browserName == Browser.FIREFOX) {
                 FirefoxOptions options = new FirefoxOptions();
                 if (isHeadless) {
-                    options.addArguments("--headless=old", "--window-size=1920,1800");
+                    options.addArguments("--headless", "--window-size=1920,1800");
                 }
                 driver.set(new FirefoxDriver(options));
             }
