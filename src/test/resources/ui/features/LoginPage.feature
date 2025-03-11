@@ -5,6 +5,7 @@ Feature: Login Functionality
     When user click on login link
     And the user is on the login page
 
+  @login
   Scenario Outline: Verify user log in with valid credentials
     When user enters valid "<email>" and "<password>" credentials
     Then user click login button
