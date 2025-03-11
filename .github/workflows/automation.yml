@@ -30,7 +30,7 @@ jobs:
           cache: maven
 
       - name: Running Hybrid Test Automation Framework with Maven
-        run: mvn clean test -X -Dbrowser=chrome -DisHeadless=false -Dsuite=testng
+        run: mvn clean test -X -Dbrowser=chrome -DisHeadless=true -Dsuite=testng
 
       - name: Upload Test logs
         if: always()
