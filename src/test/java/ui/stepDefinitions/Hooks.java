@@ -42,6 +42,6 @@ public class Hooks extends TestBase {
         // Capture screenshot after each step
         File screenshot = ((TakesScreenshot) homePage.getDriver()).getScreenshotAs(OutputType.FILE);
         byte[] fileContent = FileUtils.readFileToByteArray(screenshot);
-        scenario.attach(fileContent, "image/png", "Step Screenshot");
+        scenario.attach(fileContent, "image/png", "Screenshot");
     }
 }

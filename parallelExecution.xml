@@ -12,7 +12,7 @@
         <parameter name="isHeadless" value="${isHeadless}"/>
         <classes>
             <class name="ui.runner.RunCucumberTest"/>
-<!--            <class name="api.runner.RunCucumberTestApi"/>-->
+            <class name="api.runner.RunCucumberTestApi"/>
         </classes>
     </test>
 
@@ -23,7 +23,7 @@
         <parameter name="isHeadless" value="${isHeadless}"/>
         <classes>
             <class name="ui.runner.RunCucumberTest"/>
-<!--            <class name="api.runner.RunCucumberTestApi"/>-->
+            <class name="api.runner.RunCucumberTestApi"/>
         </classes>
     </test>
 
@@ -34,7 +34,7 @@
         <parameter name="isHeadless" value="${isHeadless}"/>
         <classes>
             <class name="ui.runner.RunCucumberTest"/>
-<!--            <class name="api.runner.RunCucumberTestApi"/>-->
+            <class name="api.runner.RunCucumberTestApi"/>
         </classes>
     </test>
 
