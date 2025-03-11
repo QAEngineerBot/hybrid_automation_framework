@@ -21,7 +21,7 @@ import io.cucumber.testng.CucumberOptions;
         tags = "",
         // Better console output formatting
         monochrome = true, publish = true)
-public class RunCucumberTest extends AbstractTestNGCucumberTests {
+public class RunUiTest extends AbstractTestNGCucumberTests {
 
 
 }

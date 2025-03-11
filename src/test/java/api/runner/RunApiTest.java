@@ -18,7 +18,7 @@ import io.cucumber.testng.CucumberOptions;
         monochrome = true,        // Better console output formatting
         publish = true
 )
-public class RunCucumberTestApi extends AbstractTestNGCucumberTests {
+public class RunApiTest extends AbstractTestNGCucumberTests {
 
 
 }
